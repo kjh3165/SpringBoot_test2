@@ -2,7 +2,9 @@ package com.springboot_test2.domain.article.service;
 
 import com.springboot_test2.domain.article.entity.Article;
 import com.springboot_test2.domain.article.repository.ArticleRepository;
+import com.springboot_test2.domain.user.entity.SiteUser;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,8 +21,8 @@ public class ArticleService {
         return articleRepository.findAll();
     }
 
-    public void write(String title, String content) {
-        Article article = new Article(title, content);
+    public void write(String title, String content, SiteUser author) {
+        Article article = new Article(title, content, author);
         article.setCreatedDate(now());
         article.setModifiedDate(article.getCreatedDate());
         articleRepository.save(article);
