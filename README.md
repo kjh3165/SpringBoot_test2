@@ -24,8 +24,36 @@
 
 ## UI/UX (화면 캡처본을 복사 붙여 넣기, url 주소 나오도록)
 - 게시글 리스트 페이지
+  <img width="2003" height="559" alt="목록" src="https://github.com/user-attachments/assets/50ea7ec7-f789-40b6-860c-9040c8653882" />
+
 - 게시글 등록 폼 페이지
+  <img width="1973" height="642" alt="등록" src="https://github.com/user-attachments/assets/9f1a6f18-63e8-436a-a09f-f23accb27634" />
+  - 게시글 등록 오류
+    <img width="1996" height="739" alt="등록 오류1" src="https://github.com/user-attachments/assets/8674235c-d614-4e6b-956f-a25a6f60daff" />
+
 - 게시글 상세 페이지
+  - 본인이 작성한 게시글
+    <img width="1992" height="433" alt="상세1" src="https://github.com/user-attachments/assets/5039fc2d-8649-444f-9a0a-5ccaa2447955" />
+  - 다른 유저가 작성한 게시글
+    <img width="1991" height="475" alt="상세2" src="https://github.com/user-attachments/assets/69db4e86-4c36-4f90-8fed-a542dde8ea08" />
+
 - 로그인 페이지
+  <img width="1981" height="459" alt="로그인" src="https://github.com/user-attachments/assets/45f37659-6360-45f3-9465-565e5a12f999" />
+  - 로그인 오류
+    <img width="2014" height="538" alt="로그인 오류1" src="https://github.com/user-attachments/assets/0baaa121-4eb8-4f2f-a65d-ff23ce707349" />
+
 - 회원가입 페이지
+  <img width="1981" height="602" alt="회원가입" src="https://github.com/user-attachments/assets/3d6cca61-20ad-4814-9bf5-7b70bf57c1d4" />
+  - 회원가입 오류1
+    <img width="2006" height="775" alt="회원가입 오류1" src="https://github.com/user-attachments/assets/7aec3a89-c175-4ad3-a482-f9465caddfe2" />
+  - 회원가입 오류2
+    <img width="1981" height="679" alt="회원가입 오류2" src="https://github.com/user-attachments/assets/2eea1068-a5d6-4d8a-9b9e-a6b150786244" />
+  - 회원가입 오류3
+    <img width="1992" height="683" alt="회원가입 오류3" src="https://github.com/user-attachments/assets/963f4ee9-c730-4fc7-939b-162c02d9f5ee" />
+
 - (선택) 검색 페이지
+  - 'test' 검색
+    <img width="1989" height="486" alt="검색1" src="https://github.com/user-attachments/assets/7c626dc5-8b65-4de2-8c2f-55c6add0ca58" />
+  - 'hi' 검색
+    <img width="1991" height="447" alt="검색2" src="https://github.com/user-attachments/assets/bd21e8a1-7f3b-42c3-8576-c9d253a4ccd6" />
+
