@@ -22,6 +22,9 @@
 ## 미비사(선택)항 or 막힌 부분
 - ...
 
+## 비고
+- 검색 기능 : 제목 및 내용만 검색하게 구현
+
 ## UI/UX (화면 캡처본을 복사 붙여 넣기, url 주소 나오도록)
 - 게시글 리스트 페이지
   <img width="2003" height="559" alt="목록" src="https://github.com/user-attachments/assets/50ea7ec7-f789-40b6-860c-9040c8653882" />
