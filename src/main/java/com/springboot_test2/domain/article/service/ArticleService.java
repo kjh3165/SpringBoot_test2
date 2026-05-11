@@ -17,8 +17,8 @@ import static java.time.LocalDateTime.now;
 public class ArticleService {
     private final ArticleRepository articleRepository;
 
-    public List<Article> getList() {
-        return articleRepository.findAll();
+    public List<Article> getList(String kw) {
+        return articleRepository.findAllByKeyword(kw);
     }
 
     public void write(String title, String content, SiteUser author) {
