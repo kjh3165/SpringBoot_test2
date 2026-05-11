@@ -31,13 +31,13 @@ public class ArticleController {
         List<Article> articleList = articleService.getList(kw);
         model.addAttribute("articleList", articleList);
         model.addAttribute("kw", kw);
-        return "list.html";
+        return "article/list.html";
     }
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/create")
     public String create(ArticleForm articleForm){
-        return "write.html";
+        return "article/write.html";
     }
 
     @GetMapping("/detail/{id}")
@@ -48,7 +48,7 @@ public class ArticleController {
             return "redirect:/article/list";
         }
         model.addAttribute("article", article);
-        return "detail.html";
+        return "article/detail.html";
     }
 
     @PreAuthorize("isAuthenticated()")
@@ -61,7 +61,7 @@ public class ArticleController {
         model.addAttribute("article", article);
         articleForm.setTitle(article.getTitle());
         articleForm.setContent(article.getContent());
-        return "modify.html";
+        return "article/modify.html";
     }
 
     @GetMapping("/delete/{id}")
@@ -74,7 +74,7 @@ public class ArticleController {
     @PostMapping("/create")
     public String create(@Valid ArticleForm articleForm, BindingResult bindingResult, Principal principal) {
         if (bindingResult.hasErrors()) {
-            return "write.html";
+            return "article/write.html";
         }
         SiteUser siteUser = this.userService.getUser(principal.getName());
         articleService.write(articleForm.getTitle(), articleForm.getContent(), siteUser);
@@ -86,7 +86,7 @@ public class ArticleController {
         Article article = articleService.getArticleById(id);
         model.addAttribute("article", article);
         if (bindingResult.hasErrors()) {
-            return "modify.html";
+            return "article/modify.html";
         }
         if(!article.getAuthor().getUsername().equals(principal.getName())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "수정권한이 없습니다.");

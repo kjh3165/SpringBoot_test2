@@ -20,24 +20,24 @@ public class UserController {
 
     @GetMapping("/signup")
     public String signup(UserCreateForm userCreateForm) {
-        return "signup.html";
+        return "user/signup.html";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "login.html";
+        return "user/login.html";
     }
 
     @PostMapping("/signup")
     public String signup(@Valid UserCreateForm userCreateForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "signup.html";
+            return "user/signup.html";
         }
 
         if (!userCreateForm.getPassword().equals(userCreateForm.getPassword_chk())) {
             bindingResult.rejectValue("password_chk", "passwordInCorrect",
                     "2개의 패스워드가 일치하지 않습니다.");
-            return "signup.html";
+            return "user/signup.html";
         }
 
         try {
@@ -45,11 +45,11 @@ public class UserController {
         }catch(DataIntegrityViolationException e) {
             e.printStackTrace();
             bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.");
-            return "signup.html";
+            return "user/signup.html";
         }catch(Exception e) {
             e.printStackTrace();
             bindingResult.reject("signupFailed", e.getMessage());
-            return "signup.html";
+            return "user/signup.html";
         }
 
         return "redirect:/";
